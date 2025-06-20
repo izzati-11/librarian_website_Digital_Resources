@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Little Readers Library - Librarian</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff8dc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f4a261;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin: 0;
+    }
+    nav {
+      background-color: #fefae0;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e76f51;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: #fffbeb;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #e76f51;
+      text-align: center;
+    }
+    #librarian-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px auto;
+      object-fit: cover;
+      border: 4px solid #f4a261;
+      display: block;
+    }
+    #bio-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #21867a;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 40px;
+    }
+
+    @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  #librarian-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Digital Librarian Logo" />
+    <h1>Nurul Izzati – Digital Resources Librarian</h1>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#librarian">Librarian</a>
+    <a href="#resources">Digital Resources</a>
+    <a href="#activities">Activities</a>
+  </nav>
+  <section id="about">
+    <h2>About This Website</h2>
+    <p>Welcome to <strong>Little Readers Library</strong> – a fun and interactive digital space specially designed for young readers aged 3 to 12. This website is managed by a digital resources librarian to help children explore the joy of reading through stories, games, and educational content.</p>
+    <p>All content here is carefully selected to be safe, age-appropriate, and enjoyable. Parents are encouraged to guide their children while using the website to make the learning experience even more meaningful.</p>
+    <p>Whether you’re here to read a story, listen to animal sounds, or answer fun quizzes – we hope this digital library becomes your child’s new favorite place to learn and explore!</p>
+  </section>
+  <section id="librarian">
+    <h2>Your Digital Librarian</h2>
+    <img src="librarian.jpg" alt="Librarian Photo" id="librarian-photo" />
+    <p id="bio-text">
+      Hello! My name is Nurul Izzati Binti Ab Hamid, and I am the Digital Resources Librarian for Little Readers Library. I’m here to guide young readers and their parents through our fun and interactive digital collections. My goal is to make learning joyful, accessible, and safe for every child who visits this site.
+    </p>
+
+  </section>
+ <section id="resources">
+  <h2>Digital Resources</h2>
+  <ul>
+    <li>🎨 <a href="https://www.crayola.com/free-coloring-pages/" target="_blank">
+      Coloring Game – Coloring Pages</a></li>
+    <li>🧠 <a href="https://www.sesamestreet.org/games?id=25962" target="_blank">
+      Memory Game – Sesame Street: Matching Game</a></li>
+    <li>📺 <a href="https://www.youtube.com/watch?v=DR-cfDsHCGA" target="_blank">
+      Educational Video – How to Count 1–10 (for kids)</a></li>
+  </ul>
+</section>
+
+  </section>
+  <section id="activities">
+    <h2>🎮 Mini Games</h2>
+     <p>Explore our fun learning games designed to boost children's memory, creativity, and focus!</p></p>
+    <div id="game-container">
+      <div id="level1">
+        <p>Level 1: Match the animals with their sound!</p>
+        <div style="display: flex; gap: 40px; justify-content: center;">
+          <div>
+            <div draggable="true" ondragstart="drag(event)" id="cat" style="padding:10px; background:#f4a261; margin:5px;">🐱 Cat</div>
+            <div draggable="true" ondragstart="drag(event)" id="dog" style="padding:10px; background:#2a9d8f; margin:5px;">🐶 Dog</div>
+            <div draggable="true" ondragstart="drag(event)" id="cow" style="padding:10px; background:#e76f51; margin:5px;">🐮 Cow</div>
+          </div>
+          <div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" data-match="cat" style="border:2px dashed #999; padding:20px;">Meow</div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" data-match="dog" style="border:2px dashed #999; padding:20px;">Woof</div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" data-match="cow" style="border:2px dashed #999; padding:20px;">Moo</div>
+          </div>
+        </div>
+        <p id="result1" style="text-align:center; font-weight:bold;"></p>
+      </div>
+      <div id="level2" style="display:none;">
+        <p>Level 2: What fruit is red?</p>
+        <button onclick="checkMCQ(this)" data-answer="no">🍌 Banana</button>
+        <button onclick="checkMCQ(this)" data-answer="yes">🍎 Apple</button>
+        <button onclick="checkMCQ(this)" data-answer="no">🍊 Orange</button>
+        <p id="result2"></p>
+      </div>
+      <div id="level3" style="display:none;">
+        <p>Level 3: Which one is BLUE?</p>
+        <button onclick="checkColor(this)" data-color="no" style="background:red; padding:15px 30px;"></button>
+        <button onclick="checkColor(this)" data-color="yes" style="background:blue; padding:15px 30px;"></button>
+        <button onclick="checkColor(this)" data-color="no" style="background:green; padding:15px 30px;"></button>
+        <p id="result3"></p>
+      </div>
+      <div id="game-complete" style="display:none; text-align:center;">
+        <p>🎉 Yay! You’ve completed all levels!</p>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
+    </div>
+  </section>
+  <script>
+    let matched = 0;
+    function allowDrop(ev) { ev.preventDefault(); }
+    function drag(ev) { ev.dataTransfer.setData("text", ev.target.id); }
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      var dragged = document.getElementById(data);
+      if (ev.target.dataset.match === data) {
+        ev.target.innerHTML = dragged.innerHTML;
+        dragged.style.visibility = "hidden";
+        matched++;
+        if (matched === 3) {
+          document.getElementById("result1").textContent = "Well done! Proceeding to Level 2...";
+          setTimeout(() => {
+            document.getElementById("level1").style.display = "none";
+            document.getElementById("level2").style.display = "block";
+          }, 1500);
+        }
+      } else {
+        document.getElementById("result1").textContent = "Oops! Try again.";
+      }
+    }
+    function checkMCQ(btn) {
+      if (btn.dataset.answer === "yes") {
+        document.getElementById("result2").textContent = "Correct! Proceeding to Level 3...";
+        setTimeout(() => {
+          document.getElementById("level2").style.display = "none";
+          document.getElementById("level3").style.display = "block";
+        }, 1500);
+      } else {
+        document.getElementById("result2").textContent = "Try again!";
+      }
+    }
+    function checkColor(btn) {
+      if (btn.dataset.color === "yes") {
+        document.getElementById("result3").textContent = "Correct! 🎉";
+        setTimeout(() => {
+          document.getElementById("level3").style.display = "none";
+          document.getElementById("game-complete").style.display = "block";
+        }, 1500);
+      } else {
+        document.getElementById("result3").textContent = "Nope! Try again.";
+      }
+    }
+    function restartGame() {
+      matched = 0;
+      location.reload();
+    }
+  </script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6854e7e7416641190936873d/1iu5qjotr';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <footer style="background-color: #f4a261; color: white; text-align: center; padding: 20px; margin-top: 50px;">
+  <p>&copy; 2025 Little Readers Library. All rights reserved.</p>
+  <p>Designed by Nurul Izzati – Digital Resources Librarian</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+                                    
